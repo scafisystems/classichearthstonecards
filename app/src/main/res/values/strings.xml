@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">ClassicHearthStoneCards</string>
+    <string name="txt_description">Description:</string>
+
+    <string name="txt_name">Name:</string>
+    <string name="txt_desc">Description</string>
+    <string name="txt_desc2">Desc 2:</string>
+    <string name="txt_set">Set</string>
+    <string name="txt_type">Type</string>
+    <string name="txt_faction">Faction</string>
+    <string name="txt_rarity">Rarity</string>
+    <string name="txt_attack">Attack</string>
+    <string name="txt_cost">Cost</string>
+    <string name="txt_health">Health</string>
+    <string name="txt_empty">None</string>
+
+
+</resources>
