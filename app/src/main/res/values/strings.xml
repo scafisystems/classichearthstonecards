@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">ClassicHearthStoneCards</string>
-    <string name="txt_description">Description:</string>
+    <string name="classic_title">Classic Cards</string>
+    <string name="details_title">Detail Card: </string>
+    <string name="txt_description">Description: </string>
+    <string name="txt_title">Title: </string>
+    <string name="txt_error">Something went wrong, please try again </string>
 
     <string name="txt_name">Name:</string>
     <string name="txt_desc">Description</string>
@@ -13,6 +17,7 @@
     <string name="txt_cost">Cost</string>
     <string name="txt_health">Health</string>
     <string name="txt_empty">None</string>
+    <string name="title_activity_main_compose">MainActivityCompose</string>
 
 
 </resources>

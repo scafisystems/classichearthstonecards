@@ -3,10 +3,9 @@ package com.scafisystems.classichearthstonecards.presenter.viewmodel
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.scafisystems.classichearthstonecards.domain.datasource.CardDataSource
 import com.scafisystems.classichearthstonecards.domain.usecase.GetClassicCardsUseCase
+import com.scafisystems.classichearthstonecards.helper.LiveDataHelper.getOrAwaitValue
 import com.scafisystems.classichearthstonecards.helper.MockData.listOfCards
 import com.scafisystems.classichearthstonecards.helper.MockData.listOfCardsWithInvalidCards
-import com.scafisystems.classichearthstonecards.helper.LiveDataHelper.getOrAwaitValue
-import com.scafisystems.classichearthstonecards.presenter.imageloader.ImageLoader
 import io.mockk.coEvery
 import io.mockk.mockk
 import kotlinx.coroutines.Dispatchers
@@ -46,11 +45,9 @@ class ClassicCardsViewModelTest {
             cardDataSource.fetchClassicCards()
         } returns listOfCards
 
-        val imageLoader = mockk<ImageLoader>()
-
         val getClassicCardsUseCase = GetClassicCardsUseCase(cardDataSource)
 
-        val viewModel = ClassicCardsViewModel(getClassicCardsUseCase, imageLoader)
+        val viewModel = ClassicCardsViewModel(getClassicCardsUseCase)
 
         assertEquals(2, viewModel.listOfClassicCards.getOrAwaitValue().size)
     }
@@ -62,11 +59,9 @@ class ClassicCardsViewModelTest {
             cardDataSource.fetchClassicCards()
         } returns listOfCardsWithInvalidCards
 
-        val imageLoader = mockk<ImageLoader>()
-
         val getClassicCardsUseCase = GetClassicCardsUseCase(cardDataSource)
 
-        val viewModel = ClassicCardsViewModel(getClassicCardsUseCase, imageLoader)
+        val viewModel = ClassicCardsViewModel(getClassicCardsUseCase)
 
         assertEquals(2, viewModel.listOfClassicCards.getOrAwaitValue().size)
     }
